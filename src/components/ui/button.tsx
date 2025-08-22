@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Football theme variants
+        hero: "bg-gradient-field text-primary-foreground hover:shadow-field-glow transition-all duration-300 border border-field-light/20 stadium-glow",
+        live: "bg-red-card text-goalpost hover:bg-red-card/90 animate-pulse shadow-lg",
+        field: "bg-field-green text-goalpost hover:bg-field-light transition-all duration-300",
+        premium: "bg-gradient-hero text-primary-foreground hover:shadow-card-glow transition-all duration-300 border border-primary-glow/30"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg font-semibold",
         icon: "h-10 w-10",
       },
     },

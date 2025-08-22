@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Football theme colors
+				field: {
+					green: 'hsl(var(--field-green))',
+					light: 'hsl(var(--field-green-light))'
+				},
+				stadium: {
+					dark: 'hsl(var(--pitch-dark))',
+					gray: 'hsl(var(--stadium-gray))'
+				},
+				referee: {
+					yellow: 'hsl(var(--referee-yellow))'
+				},
+				'red-card': 'hsl(var(--red-card))',
+				'goalpost': 'hsl(var(--goalpost-white))'
+			},
+			backgroundImage: {
+				'gradient-field': 'var(--gradient-field)',
+				'gradient-stadium': 'var(--gradient-stadium)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'stadium': 'var(--shadow-stadium)',
+				'card-glow': 'var(--shadow-card)',
+				'field-glow': 'var(--glow-field)'
+			},
+			animation: {
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

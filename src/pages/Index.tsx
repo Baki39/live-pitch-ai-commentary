@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { FootballHeader } from "@/components/FootballHeader";
+import { HeroSection } from "@/components/HeroSection";
+import { FeaturesGrid } from "@/components/FeaturesGrid";
+import { PricingSection } from "@/components/PricingSection";
+import { BottomNavigation } from "@/components/BottomNavigation";
 
 const Index = () => {
+  // Mock user data - in real app this would come from auth context
+  const user = null; // Set to null for demo, or use: { name: "Marko", plan: "premium" as const }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <FootballHeader user={user} />
+      
+      <main className="relative">
+        <HeroSection />
+        <FeaturesGrid />
+        <PricingSection />
+        
+        {/* Spacer for bottom navigation */}
+        <div className="h-24" />
+      </main>
+      
+      <BottomNavigation />
     </div>
   );
 };
