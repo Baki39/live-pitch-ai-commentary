@@ -18,18 +18,18 @@ export const FeaturesGrid = () => {
   const features = [
     {
       icon: <Camera className="w-8 h-8 text-field-light" />,
-      title: "AI Camera Tracking",
-      description: "Tapnite na igrača na kameri za automatsko praćenje tokom cijele utakmice."
+      title: "Multi-Player AI Tracking",
+      description: "Napredni computer vision algoritmi automatski prepoznaju i prate do 22 igrača istovremeno. Jednostavno tapnite na igrača da ga označite - AI će ga pratiti kroz cijelu utakmicu koristeći biomechaniku kretanja i prepoznavanje lica."
     },
     {
       icon: <Target className="w-8 h-8 text-field-light" />,
-      title: "Kalibracija Terena",
-      description: "Automatska kalibracija terena, golova i linija pomoću napredne AI tehnologije."
+      title: "Smart Field Calibration",
+      description: "Automatska 3D kalibracija fudbalskog terena uz prepoznavanje linija, golova, kornera i ofsajd pozicija. AI mapira kompletnu geometriju terena za precizno mjerenje udaljenosti, brzine i pozicioniranje igrača u realnom prostoru."
     },
     {
       icon: <Mic className="w-8 h-8 text-field-light" />,
-      title: "Live AI Komentiranje",
-      description: "Profesionalno komentiranje u realnom vremenu sa različitim stilovima i glasovima."
+      title: "Neural Voice Commentary",
+      description: "Napredni GPT-4o model kombinovan sa custom sports modelom generiše profesionalno komentiranje u realnom vremenu. Prirodni bosanski jezik sa sportskim žargonom, emotivnim reakcijama na golove i taktičkim analizama."
     },
     {
       icon: <Users className="w-8 h-8 text-field-light" />,
@@ -38,13 +38,13 @@ export const FeaturesGrid = () => {
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-field-light" />,
-      title: "Stilovi Komentarisanja",
-      description: "Izaberite između energičnog, profesionalnog, emotivnog i drugih stilova."
+      title: "Personalized Commentary Styles",
+      description: "6 različitih stilova komentarisanja: Energični (kao Dragan Stojković), Profesionalni (BBC stil), Emotivni (južnoamerički), Analitički (taktički), Lokalni (prijateljski) i Dramatični (finale Svjetskog prvenstva)."
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-field-light" />,
-      title: "Detaljana Analitika",
-      description: "Šutevi, golovi, korneri, posjed lopte i sveobuhvatne statistike."
+      title: "Live Analytics Engine",
+      description: "Sveobuhvatna analiza utakmice u realnom vremenu: heat mape igrača, brzina trčanja, preciznost dodavanja, šutevi po zonama, posjed lopte po sektorima, pressing intenzitet i xG (Expected Goals) statistike sa vizualnim prikazom."
     },
     {
       icon: <Globe className="w-8 h-8 text-field-light" />,

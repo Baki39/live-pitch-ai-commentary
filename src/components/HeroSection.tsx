@@ -24,8 +24,9 @@ export const HeroSection = () => {
               <span className="text-goalpost">Komentator</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Profesionalno AI komentiranje uživo za lokalne i profesionalne fudbalske utakmice. 
-              Pratite, analizirajte i podijelite svaki trenutak.
+              Revolucionarna AI platforma za profesionalno komentiranje fudbalskih utakmica u realnom vremenu. 
+              Kombinira naprednu computer vision tehnologiju sa prirodnim jezičkim modelima za potpuno automatsko 
+              praćenje igrača, analizu taktike i energično komentiranje na bosanskom jeziku.
             </p>
           </div>
 
@@ -33,31 +34,38 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="xl" className="w-full sm:w-auto">
               <Play className="w-6 h-6 mr-3" />
-              START LIVE KOMENTIRANJE
+              POKRENI LIVE STREAM
             </Button>
             <Button variant="outline" size="xl" className="w-full sm:w-auto border-field-light text-field-light hover:bg-field-green/10">
-              Pogledaj Demo
+              <Camera className="w-5 h-5 mr-2" />
+              Pogledaj Demo Utakmicu
             </Button>
           </div>
 
           {/* Feature Pills */}
           <div className="flex flex-wrap justify-center gap-3 mt-8">
-            <Card className="px-4 py-2 bg-card/40 backdrop-blur-sm border-field-light/20">
-              <div className="flex items-center space-x-2 text-sm">
-                <Camera className="w-4 h-4 text-field-light" />
-                <span>AI Tracking</span>
+            <Card className="px-6 py-3 bg-card/40 backdrop-blur-sm border-field-light/20 hover:bg-card/60 transition-all">
+              <div className="flex items-center space-x-3 text-sm font-medium">
+                <div className="w-8 h-8 bg-gradient-field rounded-full flex items-center justify-center">
+                  <Camera className="w-4 h-4 text-background" />
+                </div>
+                <span>Multi-Player AI Tracking</span>
               </div>
             </Card>
-            <Card className="px-4 py-2 bg-card/40 backdrop-blur-sm border-field-light/20">
-              <div className="flex items-center space-x-2 text-sm">
-                <Mic className="w-4 h-4 text-field-light" />
-                <span>Live Komentiranje</span>
+            <Card className="px-6 py-3 bg-card/40 backdrop-blur-sm border-field-light/20 hover:bg-card/60 transition-all">
+              <div className="flex items-center space-x-3 text-sm font-medium">
+                <div className="w-8 h-8 bg-gradient-field rounded-full flex items-center justify-center">
+                  <Mic className="w-4 h-4 text-background" />
+                </div>
+                <span>Neural Voice Commentary</span>
               </div>
             </Card>
-            <Card className="px-4 py-2 bg-card/40 backdrop-blur-sm border-field-light/20">
-              <div className="flex items-center space-x-2 text-sm">
-                <Zap className="w-4 h-4 text-field-light" />
-                <span>Real-time Analitika</span>
+            <Card className="px-6 py-3 bg-card/40 backdrop-blur-sm border-field-light/20 hover:bg-card/60 transition-all">
+              <div className="flex items-center space-x-3 text-sm font-medium">
+                <div className="w-8 h-8 bg-gradient-field rounded-full flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-background" />
+                </div>
+                <span>Live Analytics Engine</span>
               </div>
             </Card>
           </div>
