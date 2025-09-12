@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Play, Camera, Mic, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import stadiumHero from "@/assets/stadium-hero.jpg";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -32,7 +35,12 @@ export const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => navigate("/live-dashboard")}
+            >
               <Play className="w-6 h-6 mr-3" />
               POKRENI LIVE STREAM
             </Button>
