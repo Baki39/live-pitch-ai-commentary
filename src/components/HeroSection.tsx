@@ -11,10 +11,10 @@ export const HeroSection = () => {
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-cover sm:bg-contain sm:bg-center"
         style={{ backgroundImage: `url(${stadiumHero})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10 md:via-background/80 md:to-background/20" />
       </div>
 
       {/* Content */}
