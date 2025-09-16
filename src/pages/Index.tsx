@@ -2,7 +2,7 @@ import { FootballHeader } from "@/components/FootballHeader";
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { PricingSection } from "@/components/PricingSection";
-import { BottomNavigation } from "@/components/BottomNavigation";
+import { MobileNavigation } from "@/components/MobileNavigation";
 
 const Index = () => {
   // Mock user data - in real app this would come from auth context
@@ -16,12 +16,9 @@ const Index = () => {
         <HeroSection />
         <FeaturesGrid />
         <PricingSection />
-        
-        {/* Spacer for bottom navigation */}
-        <div className="h-24" />
       </main>
       
-      <BottomNavigation />
+      <MobileNavigation />
     </div>
   );
 };
