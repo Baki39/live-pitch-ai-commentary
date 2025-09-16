@@ -29,12 +29,14 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { LiveDashboardNavigation } from "@/components/LiveDashboardNavigation";
+import stadiumHero from "@/assets/stadium-hero.jpg";
 
 const LiveDashboard = () => {
   const navigate = useNavigate();
   const [isLiveActive, setIsLiveActive] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [selectedTab, setSelectedTab] = useState("setup");
+  const [isCameraActive, setIsCameraActive] = useState(false);
 
   const handleStartLive = () => {
     setIsLiveActive(true);
@@ -108,14 +110,50 @@ const LiveDashboard = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <Camera className="w-12 h-12 mx-auto text-muted-foreground" />
-                      <p className="text-sm text-muted-foreground">Kamera nije aktivirana</p>
-                      <Button variant="outline" size="sm">
-                        Aktiviraj Kameru
-                      </Button>
-                    </div>
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden relative">
+                    {!isCameraActive ? (
+                      <>
+                        {/* Stadium background image */}
+                        <div 
+                          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                          style={{ backgroundImage: `url(${stadiumHero})` }}
+                        >
+                          <div className="absolute inset-0 bg-black/30" />
+                        </div>
+                        
+                        {/* Camera activation overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center space-y-3 bg-black/60 rounded-lg p-6 backdrop-blur-sm">
+                            <Camera className="w-12 h-12 mx-auto text-white" />
+                            <p className="text-sm text-white font-medium">Kamera nije aktivirana</p>
+                            <Button 
+                              variant="default" 
+                              size="sm"
+                              onClick={() => setIsCameraActive(true)}
+                              className="bg-green-600 hover:bg-green-700"
+                            >
+                              Aktiviraj Kameru
+                            </Button>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="absolute inset-0 bg-gray-900 flex items-center justify-center">
+                        <div className="text-center space-y-3">
+                          <div className="w-12 h-12 mx-auto bg-green-500 rounded-full flex items-center justify-center">
+                            <Camera className="w-6 h-6 text-white" />
+                          </div>
+                          <p className="text-sm text-white font-medium">Kamera je aktivna</p>
+                          <Button 
+                            variant="destructive" 
+                            size="sm"
+                            onClick={() => setIsCameraActive(false)}
+                          >
+                            Deaktiviraj Kameru
+                          </Button>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label>Rezolucija</Label>
