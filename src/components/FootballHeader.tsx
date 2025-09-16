@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { User, Crown, Settings } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface FootballHeaderProps {
   user?: {
@@ -48,6 +49,7 @@ export const FootballHeader = ({ user }: FootballHeaderProps) => {
               Prijavite se
             </Button>
           )}
+          <ThemeToggle />
           <Button variant="ghost" size="icon">
             <Settings className="w-4 h-4" />
           </Button>
