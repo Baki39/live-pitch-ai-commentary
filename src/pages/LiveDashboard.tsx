@@ -28,6 +28,7 @@ import {
   ArrowLeft
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { LiveDashboardNavigation } from "@/components/LiveDashboardNavigation";
 
 const LiveDashboard = () => {
   const navigate = useNavigate();
@@ -638,6 +639,15 @@ const LiveDashboard = () => {
           </TabsContent>
         </Tabs>
       </div>
+      
+      {/* Mobile Bottom Navigation */}
+      <LiveDashboardNavigation 
+        selectedTab={selectedTab} 
+        onTabChange={setSelectedTab} 
+      />
+      
+      {/* Spacer for mobile navigation */}
+      <div className="h-20 md:hidden" />
     </div>
   );
 };
